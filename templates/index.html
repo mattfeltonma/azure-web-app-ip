@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sample IP App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .main {
+            margin-left: 30px
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <table>
+            <tr>
+                <th>Source IP</th>
+                <th>X-Forwarded-For</th>
+                <th>X-Forwarded-Host</th>
+                <th>X-Forwarded-Port</th>
+            </tr>
+            <tr>
+                <td>{{sip}}</td>
+                <td>{{xfor}}</td>
+                <td>{{xhost}}</td>
+                <td>{{xport}}</td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</body>
+
+</html>
