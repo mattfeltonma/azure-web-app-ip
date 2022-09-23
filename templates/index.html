@@ -13,11 +13,41 @@
         .main {
             margin-left: 30px
         }
+
+        #ipinformation {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #ipinformation td,
+
+        #ipinformation th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #ipinformation tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #ipinformation tr:hover {
+            background-color: #ddd;
+        }
+
+        #ipinformation th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
     </style>
 </head>
+
 <body>
     <div class="main">
-        <table>
+        <table id="ipinformation">
             <tr>
                 <th>Source IP</th>
                 <th>X-Forwarded-For</th>
