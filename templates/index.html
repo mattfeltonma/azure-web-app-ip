@@ -52,22 +52,12 @@
     <div class="split">
         <div class="tablecentered">
         <table id="ipinformation">
+            {% for key, value in active_headers.items() %}
             <tr>
-                <th>Source IP</th>
-                <td>{{sip}}</td>
+                <th> {{key}} </th>
+                <td> {{value}} </td>
             </tr>
-            <tr>
-                <th>X-Forwarded-For</th>
-                <td>{{xfor}}</td>
-            </tr>
-            <tr>
-                <th>X-Forwarded-Host</th>
-                <td>{{xhost}}</td>
-            </tr>
-            <tr>
-                <th>X-Forwarded-Port</th>
-                <td>{{xport}}</td>
-            </tr>
+            {% endfor %}
         </table>
         </div>
     </div>
