@@ -7,47 +7,15 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+            margin: 30px
         }
 
-        .split {
-            height: 100%;
-            width: 50%;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            overflow-x: hidden;
-            padding-top: 20px;
-        }
-
-        .left {
-            left: 0;
-        }
-
-        .right {
-            right: 0;
-        }
-
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .tablecentered {
             text-align: center;
         }
 
-        .text-centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-        }
-
-        .headers {
-            border: 1px outset #F2F2F2;
-            background-color: white;
+        .textcentered {
             overflow-wrap: break-word;
-            inline-size: 600px;
         }
 
         #ipinformation {
@@ -81,8 +49,8 @@
     </style>
 </head>
 <body>
-    <div class="split left">
-        <div class="centered">
+    <div class="split">
+        <div class="tablecentered">
         <table id="ipinformation">
             <tr>
                 <th>Source IP</th>
@@ -103,8 +71,8 @@
         </table>
         </div>
     </div>
-    <div class="split right">
-        <div class="text-centered">
+    <div class="split">
+        <div class="textcentered">
             <div class="headers">
                 <pre>{{headers}}</pre>
             </div>
