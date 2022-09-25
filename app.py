@@ -25,5 +25,5 @@ def index():
     else:
         X_FORWARDED_PORT = 'Empty'
     SOURCE_IP_ADDRESS = request.remote_addr
-    HEADERS = request.headers
+    HEADERS = json.dumps(request.headers, sort_keys = True, indent = 4, separators = (',', ': '))
     return render_template('index.html', xfor=X_FORWARDED_FOR, xhost=X_FORWARDED_HOST, xport=X_FORWARDED_PORT, sip=SOURCE_IP_ADDRESS, headers=HEADERS)
