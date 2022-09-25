@@ -10,8 +10,22 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        .main {
-            margin-left: 30px
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 0;
         }
 
         #ipinformation {
@@ -46,22 +60,45 @@
 </head>
 
 <body>
-    <div class="main">
+    <div class="split left">
         <table id="ipinformation">
             <tr>
                 <th>Source IP</th>
-                <th>X-Forwarded-For</th>
-                <th>X-Forwarded-Host</th>
-                <th>X-Forwarded-Port</th>
+                <td>{{sip}}</td>
             </tr>
             <tr>
-                <td>{{sip}}</td>
+                <th>X-Forwarded-For</th>
                 <td>{{xfor}}</td>
+            </tr>
+            <tr>
+                <th>X-Forwarded-Host</th>
                 <td>{{xhost}}</td>
+            </tr>
+            <tr>
+                <th>X-Forwarded-Port</th>
                 <td>{{xport}}</td>
             </tr>
         </table>
     </div>
+    <div class="split right">
+        <table id="ipinformation">
+            <tr>
+                <th>Source IP</th>
+                <td>{{sip}}</td>
+            </tr>
+            <tr>
+                <th>X-Forwarded-For</th>
+                <td>{{xfor}}</td>
+            </tr>
+            <tr>
+                <th>X-Forwarded-Host</th>
+                <td>{{xhost}}</td>
+            </tr>
+            <tr>
+                <th>X-Forwarded-Port</th>
+                <td>{{xport}}</td>
+            </tr>
+        </table>
     </div>
 </body>
 
