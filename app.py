@@ -30,7 +30,7 @@ def index():
 
 
     # Capture the source IP of the request and all headers in the request to display later on
-    active_headers['Client Ip'] = request.remote_addr
+    active_headers['Source Ip'] = request.remote_addr
     HEADERS = json.dumps(dict(request.headers), sort_keys = True, indent = 4, separators = (',', ': '))
 
     # Build an HTML table with the headers that you want displayed
