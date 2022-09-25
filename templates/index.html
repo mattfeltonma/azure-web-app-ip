@@ -28,6 +28,14 @@
             left: 0;
         }
 
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
         #ipinformation {
             font-family: Arial, Helvetica, sans-serif;
             border-collapse: collapse;
@@ -61,6 +69,7 @@
 
 <body>
     <div class="split left">
+        <div class="centered">
         <table id="ipinformation">
             <tr>
                 <th>Source IP</th>
@@ -79,8 +88,10 @@
                 <td>{{xport}}</td>
             </tr>
         </table>
+        </div>
     </div>
     <div class="split right">
+        <div class="centered"></div>
         <table id="ipinformation">
             <tr>
                 <th>Source IP</th>
@@ -99,6 +110,7 @@
                 <td>{{xport}}</td>
             </tr>
         </table>
+        </div>
     </div>
 </body>
 
