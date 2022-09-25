@@ -35,6 +35,12 @@
             text-align: center;
         }
 
+        .headers {
+            border: 1px outset #F2F2F2;
+            background-color: white;
+            width: 600px
+        }
+
         #ipinformation {
             font-family: Arial, Helvetica, sans-serif;
             border-collapse: collapse;
@@ -89,25 +95,10 @@
         </div>
     </div>
     <div class="split right">
-        <div class="centered"></div>
-        <table id="ipinformation">
-            <tr>
-                <th>Source IP</th>
-                <td>{{sip}}</td>
-            </tr>
-            <tr>
-                <th>X-Forwarded-For</th>
-                <td>{{xfor}}</td>
-            </tr>
-            <tr>
-                <th>X-Forwarded-Host</th>
-                <td>{{xhost}}</td>
-            </tr>
-            <tr>
-                <th>X-Forwarded-Port</th>
-                <td>{{xport}}</td>
-            </tr>
-        </table>
+        <div class="centered">
+            <div class="headers">
+                {{headers}}
+            </div>
         </div>
     </div>
 </body>
