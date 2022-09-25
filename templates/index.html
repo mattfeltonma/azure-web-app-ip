@@ -35,6 +35,13 @@
             text-align: center;
         }
 
+        .text-centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
         .headers {
             border: 1px outset #F2F2F2;
             background-color: white;
@@ -95,9 +102,11 @@
         </div>
     </div>
     <div class="split right">
+        <div class="text-centered">
             <div class="headers">
                 <pre>{{headers}}</pre>
             </div>
+        </div>
     </div>
 </body>
 
