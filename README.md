@@ -1,2 +1,3 @@
-# azure-web-app-ip
-Python application built using Flask framework that displays the user's source IP address and the contents of the X-ForwardedFor, X-ForwardedHost, and X-ForwardedPort request headers
+# Python Flask Show Headers
+
+This is a simple Python Flask application that will display a specific set of headers related to understanding a requests network path.
