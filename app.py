@@ -21,7 +21,7 @@ display_headers = [
 @app.route("/")
 def index():
 
-    # Iterate through the dict of headers to highlight and set the value equal
+    # Iterate through the dict of headers to determine which headers are present in the request and store them
     active_headers = {}
     for header_name in display_headers:
         if header_name in request.headers:
@@ -32,8 +32,5 @@ def index():
     active_headers['Source Ip'] = request.remote_addr
     HEADERS = json.dumps(dict(request.headers), sort_keys = True, indent = 4, separators = (',', ': '))
 
-    # Build an HTML table with the headers that you want displayed
-
-
-
+    # Render the web page
     return render_template('index.html', headers=HEADERS, active_headers=active_headers)
